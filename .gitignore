@@ -1,5 +1,3 @@
 __pycache__
 outputs/*
 models/ldm/stable-diffusion-v1
-assets/results.gif
-data/imagenet_train_hr_indices.p
