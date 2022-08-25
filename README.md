@@ -4,11 +4,21 @@
 
 This is a "Stable Diffusion" fork's `jetson` branch, specifically created to show how to run Stable Diffusion on NVIDIA Jetson platform.
 
+
 ### How-to run
+
+#### [0] Pre-setup
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install nvidia-jetpack-dev
+````
 
 #### [1] Pull and run the container
 
 ```bash
+cd
 git clone https://github.com/chitoku/stable-diffusion
 cd stable-diffusion
 ./docker/run.sh
@@ -23,16 +33,23 @@ Save the `sd-v1-4.ckpt` file under `./models/ldm/stable-diffusion-v1` directory.
 #### [3] Run `txt2img.py` inside the container
 
 ```bash
-python3 scripts/txt2img.py --prompt "One day as an Old Woman was washing in the river, a huge peach came floating down" --plms
+python3 scripts/txt2img.py --prompt "A CEO in a black leather jacket presents a new AI chip" --plms
 ```
 
 #### [4] Check under `outputs/txt2img-samples` dir
 
 Enjoy.
 
+
 ### Tested Jetson
 
-- Jetson AGX Orin Developer Kit
+|                                  | `txt2img.py` | `img2img.py` |
+| -------------------------------- | ------------ | ------------ |
+| Jetson AGX Orin Developer Kit    | 2 min 47 sec |              |
+| Jetson AGX Xavier Developer Kit  |              |              |
+| Jetson Xavier NX Developer Kit   |              |              |
+
+> Tested in `Max-N` mode, with `jetson-clock` enabled. Measured on the 2nd run.
 
 
 ## Original content below
