@@ -1,4 +1,42 @@
 # Stable Diffusion
+
+## (8/25) Jetson instruction
+
+This is a "Stable Diffusion" fork's `jetson` branch, specifically created to show how to run Stable Diffusion on NVIDIA Jetson platform.
+
+### How-to run
+
+#### [1] Pull and run the container
+
+```bash
+git clone https://github.com/chitoku/stable-diffusion
+cd stable-diffusion
+./docker/run.sh
+```
+
+#### [2] Download weights
+
+Download the weights file from [Hugging Face page](https://huggingface.co/CompVis/stable-diffusion-v1-4).
+
+Save the `sd-v1-4.ckpt` file under `./models/ldm/stable-diffusion-v1` directory.
+
+#### [3] Run `txt2img.py` inside the container
+
+```bash
+python3 scripts/txt2img.py --prompt "One day as an Old Woman was washing in the river, a huge peach came floating down" --plms
+```
+
+#### [4] Check under `outputs/txt2img-samples` dir
+
+Enjoy.
+
+### Tested Jetson
+
+- Jetson AGX Orin Developer Kit
+
+
+## Original content below
+
 *Stable Diffusion was made possible thanks to a collaboration with [Stability AI](https://stability.ai/) and [Runway](https://runwayml.com/) and builds upon our previous work:*
 
 [**High-Resolution Image Synthesis with Latent Diffusion Models**](https://ommer-lab.com/research/latent-diffusion-models/)<br/>
