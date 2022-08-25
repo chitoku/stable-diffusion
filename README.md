@@ -21,6 +21,7 @@ sudo apt-get install nvidia-jetpack-dev
 cd
 git clone https://github.com/chitoku/stable-diffusion
 cd stable-diffusion
+git checkout jetson
 ./docker/run.sh
 ```
 
