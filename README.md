@@ -34,7 +34,7 @@ Save the `sd-v1-4.ckpt` file under `./models/ldm/stable-diffusion-v1` directory.
 #### [3] Run `txt2img.py` inside the container
 
 ```bash
-python3 scripts/txt2img.py --prompt "A CEO in a black leather jacket presents a new AI chip" --plms
+python3 scripts/txt2img.py --prompt "Robots marching down a street in Japanese city" --plms
 ```
 
 #### [4] Check under `outputs/txt2img-samples` dir
@@ -47,7 +47,7 @@ Enjoy.
 |                                  | `txt2img.py` | `img2img.py` |
 | -------------------------------- | ------------ | ------------ |
 | Jetson AGX Orin Developer Kit    | 2 min 47 sec |              |
-| Jetson AGX Xavier Developer Kit  |              |              |
+| Jetson AGX Xavier Developer Kit  | 5 min 05 sec |              |
 | Jetson Xavier NX Developer Kit   |              |              |
 
 > Tested in `Max-N` mode, with `jetson-clock` enabled. Measured on the 2nd run.
