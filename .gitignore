@@ -1,0 +1,3 @@
+__pycache__
+outputs/*
+models/ldm/stable-diffusion-v1
